@@ -6,29 +6,32 @@
   - `if` the number is even print the message " number is even"
   - `if` the number is odd print the message "number is odd"
 */
-
-let num = Number(prompt(`Enter a Number!`));
-if(num % 2 === 0){
+// ------------------------------------------------------
+let num = Number(prompt(`Enter a Number?`));
+if (num % 2 === 0) {
   alert(`Number is even`);
 } else {
   alert(`Number is odd`);
 }
+// ----------------------------------------------------------------------
 
 
 // 2. Write a program to accept two numbers from user using`prompt` and alert the max value.
-
-let num1 = Number(prompt(`Enter a Number`));
-let num2 = Number(prompt(`Enter a Number`));
-
-if(num1 >= num2){
-  alert(`${num1} is max`);
+// ---------------------------------------------------------------------
+let numA = Number(prompt(`Enter a Number A`));
+let numB = Number(prompt(`Enter a Number B`));
+if(numA > numB){
+  alert(`${numA} is max`);
 } else{
-  alert(`${num2} is max`);
+  alert(`${numB} is max`);
 }
+// ---------------------------------------------------------------------
 
-// 3. Convert the above code using`?` terniary operator
+// // 3. Convert the above code using`?` terniary operator
 
-num1 >= num2 ? alert(`${num1} is max`) : alert(`${num2} is max`);
+// --------------------------------------------------------------------
+numA >= numB ? alert(`${numA} is greater`) : alert(`${numB} is greater`);
+// ---------------------------------------------------------------------
 
 
 /*
@@ -39,6 +42,7 @@ num1 >= num2 ? alert(`${num1} is max`) : alert(`${num2} is max`);
   - `else` print the message " All men must die"
 */
 
+// -----------------------------------------------------------
 let houseName = prompt(`Enter your house name!`);
 if(houseName == "stark"){
   alert(`"Winter is coming"`);
@@ -47,45 +51,54 @@ if(houseName == "stark"){
 } else {
   alert(`"All men must die"`);
 }
+// ---------------------------------------------------------------
+
 
 // 5. Convert the above code using`?` terniary operator
+// ----------------------------------------------------------------------
 houseName == "stark" ? alert(`"Winter is coming"`) : houseName == "lannister" ? alert(`"A lannister always pays his debt"`) : alert(`"All men must die"`);
+// ----------------------------------------------------------------------
+
 
 // Switch
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
-let month = Number(prompt(`Enter your Birthday Month (In Numbers)`));
+
+// --------------------------------------------------------------------
+let month = prompt(`Enter your Birthday Month`);
 switch (month) {
 
 // 31 DAYS
-  case 1 :
-  case 3 :
-  case 5 :
-  case 7 :
-  case 8 :
-  case 10 :
-  case 12 :
-    alert(`31 Days`);
+  case "january" :
+  case "march" :
+  case "may" :
+  case "july" :
+  case "august" :
+  case "october" :
+  case "december" :
+    alert(`Number of Days are 31`);
     break;
 
 
   // 30 DAYS
-  case 4 :
-  case 6 :
-  case 9 :
-  case 11 :
-    alert(`30 Days`);
+  case "april" :
+  case "june":
+  case "september" :
+  case "november" :
+    alert(`Number of Days are 30`);
   break;
 
 // 28 DAYS
-  case 2 : 
-    alert(`28 days`);
+  case "february" : 
+    alert(`Number of Days are 28`);
   break;
 
   default : 
   alert(`Invalid Month`);
   break;
 }
+// -------------------------------------------------------------------
+
 
 /* 7.
 - Write a program that take the salery of the user using prompt and alert the in -hand amount.You will find out the in -hand amount by deducting the tax amoun from salery.Conditions are given below.
@@ -94,6 +107,25 @@ switch (month) {
   - `Salary > 50000` tax is 30 %
 */
 
+// --------------------------------------------------------------------------
+let salary = Number(prompt(`Whats your salary per month?`));
+switch (true) {
+  case salary <= 20000 :
+  alert (`Your in hand amound is ${salary - (salary * 10 / 100)}`);
+  break;
+
+  case salary <= 40000 :
+  alert (`Your in hand amound is ${salary - (salary * 10 / 100)}`);
+  break;
+
+  case salary > 50000 :
+  alert (`Your in hand amound is ${salary - (salary * 10 / 100)}`);
+  break;
+
+  default : alert (`Not a valid input!`) ;
+  break;
+}
+// --------------------------------------------------------------------
 
 
 //  if..else vs switch
@@ -108,7 +140,7 @@ Implement the condition give below using`if..else` and`switch` statement.
   - `marks > 0` alert`"Grade D"`
 1
 */
-
+// ------------------------------------------------------------------
 let marks = Number(prompt(`Enter your marks to fnd out your grades!`));
 if (marks >= 81 && marks <= 100) {
   alert(`"Grade A"`);
@@ -121,6 +153,7 @@ if (marks >= 81 && marks <= 100) {
 }else {
   alert(`"Marks can't be greater than 100"`);
 }
+// -----------------------------------------------------------------------
 
 /* 9. Weather app
 
@@ -132,8 +165,15 @@ if (marks >= 81 && marks <= 100) {
   - Anything else should alert`Not a valid input`
 */
 
+
+
+
+
+// --------------------------------------------------------------------------
 let weather = prompt(`What is the weather like outside?`);
 
+
+// Else If
 if (weather == "sunny") {
   alert(`Wear a T-shirt`);
 } else if (weather == "rainy") {
@@ -145,3 +185,30 @@ if (weather == "sunny") {
 } else {
   alert(`Not a valid input`);
 }
+
+
+// Switch
+
+switch (weather) {
+  case "sunny" :
+  alert(`Wear a T-shirt`);
+  break;
+  
+  case "rainy" :
+  alert(`Don't forget to take your raincoat`);
+  break;
+
+  case "hot" :
+  alert(`Get a hanky`);
+  break;
+
+  case "freezing" :
+  alert(`Get your sweeter on`);
+  break;
+
+  default : 
+  alert(`Not a valid input`);
+}
+
+
+// ------------------------------------------------------------------------
