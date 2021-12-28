@@ -23,7 +23,7 @@ for (let i = 1; i <= 10; i = i + 1) {
 
 for (let i = 1; i <= 10; i = i + 1 ) {
     if (i % 2 == 0) {
-        console.log (i)        
+        console.log (i, "even");
     }
 }
 
@@ -37,7 +37,7 @@ for (let i = 1; i <= 10; i = i + 1 ) {
 
 for (let i = 1; i <= 10; i = i + 1) {
     if (i % 2 !== 0) {
-        console.log (i)
+        console.log (i, "odd");
     }
 }
 
@@ -49,7 +49,7 @@ for (let i = 1; i <= 10; i = i + 1) {
 
 let sum = 0; 
 for (let i = 1 ; i <= 10; i ++) {
-    console.log (sum = sum + i)
+    console.log (sum += i)
 }
 
 // ------------------------------------------------------------
@@ -61,7 +61,7 @@ for (let i = 1 ; i <= 10; i ++) {
 let i = 1;
 while(i <= 10) {
     console.log (i);
-    i = i + 1;
+    i++
 }
 
 // -------------------------------------------------
