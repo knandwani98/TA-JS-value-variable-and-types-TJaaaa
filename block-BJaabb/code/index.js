@@ -8,15 +8,15 @@
 
 // ------------------------------------------------------------------
 
-var user = prompt(`Enter your Name!`); 
-alert(`Welcome, ${user}`);
+// var user = prompt(`Enter your Name!`); 
+// alert(`Welcome, ${user}`);
 
-var userName = user;
-console.log (`User : ${user} & UserName : ${userName}`);
-let age = 22, isLearning = true;
+// var userName = user;
+// console.log (`User : ${user} & UserName : ${userName}`);
+// let age = 22, isLearning = true;
 
-user = "John"; 
-console.log (user, userName);
+// user = "John"; 
+// console.log (user, userName);
 
 // -----------------------------------------------------------------
 
@@ -26,10 +26,10 @@ Use `prompt` to take two numbers from user and store it in variable `numA` and `
 
 // -------------------------------------------------------------------------------
 
-let numA = Number(prompt(`Enter any Number`));
-let numB = Number(prompt(`Enter any Number`));
-let sum = numA + numB;
-alert(`The sum will be ${sum}`);
+// let numA = Number(prompt(`Enter any Number`));
+// let numB = Number(prompt(`Enter any Number`));
+// let sum = numA + numB;
+// alert(`The sum will be ${sum}`);
 
 // ---------------------------------------------------------------------------
 
@@ -39,11 +39,11 @@ alert(`The sum will be ${sum}`);
 
 // ----------------------------------------------------------------------
 
-for (let j = 0; j <= 10; j++){
-    if(j % 2 == 0){
-        console.log(j);
-    }
-}
+// for (let j = 0; j <= 10; j++){
+//     if(j % 2 == 0){
+//         console.log(j);
+//     }
+// }
 
 // ----------------------------------------------------------------------------
 
@@ -51,11 +51,11 @@ for (let j = 0; j <= 10; j++){
 
 // -------------------------------------------------------------------------
 
-for (let j = 9; j >= 0; j--) {
-    if(j % 2 !==0){
-        console.log(j)
-    }
-}
+// for (let j = 9; j >= 0; j--) {
+//     if(j % 2 !==0){
+//         console.log(j)
+//     }
+// }
 
 // -------------------------------------------------------------------------
 
@@ -63,23 +63,27 @@ for (let j = 9; j >= 0; j--) {
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
 
 // --------------------------------------------------
-let j = 5;
-while(j >= 0) {
-    console.log (j);
-    (j--);
-}
+// let string = "";
+// let j = 5;
+// while(j >= 0) {
+//     string += j;
+//     j--;
+// }
+// console.log(string);
 // --------------------------------------------------
 
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
 
 // ------------------------------------------------------
-let j = 10;
-while (j >= 0) {
-    if (j % 2 == 0){
-        console.log (j);
-    }
-    (j--);
-}
+// let string = '';
+// let j = 10;
+// while (j >= 0) {
+//     if (j % 2 == 0){
+//         string += j
+//     }
+//     j--;
+// }
+// console.log (string);
 // ------------------------------------------------
 
 // Comparisoin
@@ -97,15 +101,12 @@ Example:
 
 */
 
-let num1 = prompt(`Enter a number!`);
-let num2 = prompt(`Enter a number!`);
+let num1 = +prompt(`Enter a number!`);
+let num2 = +prompt(`Enter a number!`);
 
-if (num1 == num2) {
-    alert(`true`);
-} 
-else if (num1 !== num2){
-    alert(`false`);
-}
-else {
+if (isNaN(num1) || isNaN(num2)) {
     alert(`Enter a valid value`);
+} 
+else {
+    alert(num1 === num2);
 }
