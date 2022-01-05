@@ -15,10 +15,23 @@ var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
 
-// ⛑ Answer of the above will `$334.76`.
 
-
-
-while (bank_balance < PHONE_PRICE) {
+while (amount < bank_balance) {
     amount += PHONE_PRICE;
+    if(amount < SPENDING_THRESHOLD) {
+        amount += ACCESSORY_PRICE;
+    }
 }
+
+let tax = amount * TAX_RATE;
+
+let totalAmount = amount + tax;
+console.log(`$${totalAmount}`);
+
+if (totalamount < bank_balance) {
+    console.log(`You can afford this!`);
+}
+else {
+    console.log(`You can not afford this!`);
+}
+// ⛑ Answer of the above will `$334.76`.
